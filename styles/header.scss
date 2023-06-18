@@ -1,22 +1,48 @@
+.top__banner{
+    width: 100%;
+    height: 70px;
+    background-image: url('./../dist/assets/img/top_nav_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: -20px;
+}
 
 header{
-    .container {
+   background-color: var(--white-color);
+   border-top-right-radius: 20px;
+   border-top-left-radius: 20px;
+   padding: var(--gap)  0;
+    .header__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: var(--gap);
+        background-color: rgb(255, 255, 255);
+       
       }
 
-    .header__buttons, .navigation ul {
+    .header__buttons {
         display: flex;
         gap: var(--gap);
         
     }
 
     .navigation ul{
+        display: flex;
+        gap: calc(var(--gap)* 2);
+        
         text-transform: uppercase;
        font: var(--smaller-font);
     
     
+      }
+
+      .header__logo{
+        img{
+            height: 35px;
+            width: 150px;
+        }
+     
       }
 }
