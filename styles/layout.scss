@@ -5,9 +5,15 @@ header, main, footer {
     align-items: center;
   }
  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap);
+  }
 
-  .containner{
+  .container{
     width: 1170px;
+    align-items: center;
 
     @media (min-width: v.$bigger-mobile ) {
         width: 540px;
@@ -26,3 +32,11 @@ header, main, footer {
                       };
   };
 
+  .navigation ul{
+    display: flex;
+    gap: var(--gap);
+    text-transform: uppercase;
+   font: var(--smaller-font);
+
+
+  }
