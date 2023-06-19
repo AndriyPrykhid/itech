@@ -12,11 +12,13 @@ header{
    background-color: var(--white-color);
    border-top-right-radius: 20px;
    border-top-left-radius: 20px;
-   padding: var(--gap)  0;
+padding: calc(var(--gap)*2);
+
     .header__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
         gap: var(--gap);
         background-color: rgb(255, 255, 255);
        
@@ -28,21 +30,23 @@ header{
         
     }
 
-    .navigation ul{
-        display: flex;
-        gap: calc(var(--gap)* 2);
-        
-        text-transform: uppercase;
-       font: var(--smaller-font);
-    
-    
-      }
+   
 
-      .header__logo{
-        img{
-            height: 35px;
-            width: 150px;
-        }
-     
-      }
+}
+.navigation ul{
+  display: flex;
+  gap: calc(var(--gap)* 2);
+  
+  text-transform: uppercase;
+ font: var(--smaller-font);
+
+
+}
+
+.logo{
+  img{
+      height: 35px;
+      width: 150px;
+  }
+
 }

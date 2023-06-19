@@ -1,11 +1,22 @@
 @use'./styles/global.scss';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
 
 
 html{
   background-color: var(--white-color);
   color: var(--black-color);
+  font: var(--font);
+  
 };
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 var(--gap);
+}
 
 body,ul,li, h1, h2, h3, h4, h5, h6, p, button {
   margin: 0;
