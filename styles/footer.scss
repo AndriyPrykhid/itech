@@ -1,10 +1,12 @@
+@use'variables' as v;
+
+
 footer{
     --size: 40px;
-margin-top: auto;
 position: relative;
 padding: calc(var(--gap)*2);
 background-color: var(--creame-color);
-margin-top: 160px;
+margin-top: 169px;
 
 .footer__wave {
     position: absolute;
@@ -54,17 +56,60 @@ margin-top: 160px;
     }
 
     .footer__center{
-   display: flex;
-   width: 100%;
-   gap: var(--gap);
-   align-items: center;
-   justify-content: space-between;
-   padding: var(--gap) 0;
-   border-bottom: 2px solid var(--grey-color);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: var(--gap);
+        padding: var(--gap) 0;
+        border-bottom: 2px solid var(--grey-color);
+
+        @media (min-width: v.$tablet ) {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+              
+                 }
 
    .footer__lang{
     width: 208px;
    }
+
+   .footer__button{
+    white-space: nowrap;
+}
+    }
+    .footer__navigation{
+        margin-left: auto;
+        margin-right: auto;
+        @media (min-width: 439px ) {
+            width: 400px;
+                  
+                     }
+                     @media (min-width: v.$desktop ) {
+                        width: auto;
+                              
+                                 }
+    }
+   
+    .footer__navigation ul{
+        flex-wrap: wrap;
+        justify-content: center;
+       
+        li{
+            display: flex;
+            width: 80px;
+            align-self: start;
+            @media (min-width: v.$desktop ) {
+                width: auto;
+                      flex-wrap: nowrap;
+                         }
+        }
+        @media (min-width: v.$tablet ) {
+          justify-content: space-between;
+                
+                   }
+
+                 
     }
 
     .footer__bottom {
@@ -78,17 +123,23 @@ margin-top: 160px;
         }
     }
 
-    .footer__button{
+    .footer__buttons{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: var(--gap);
+        margin: calc(var(--gap)* 2) 0;
         padding: 0 var(--gap);
 
 
+        @media (min-width: v.$bigger-mobile ) {
+            flex-direction: row;
+                  
+                     }
     }
 
 
 }
+
 
 .link{
     color: vat(--black-color);
