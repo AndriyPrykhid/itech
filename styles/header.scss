@@ -81,16 +81,20 @@ svg{
         @media (min-width: v.$tablet) {
           flex-direction: row;
          }
+      
       }
 
     .header__buttons {
       position: relative;
-      width: 208px;
+     
         display: flex;
         align-items: center;
         gap: var(--gap);
     
      
+        @media (min-width: v.$desktop) {
+          padding-left: 100px;
+        }
       
     }
  
@@ -111,7 +115,7 @@ svg{
 
       width: 140px;
       top: 40px;
-      right: 0px;
+      right: -39px;
      
       background-color: var(--creame-color);
       border-radius: 20px;
@@ -126,10 +130,10 @@ svg{
         }
       }
       @media (min-width: v.$tablet ) {
-        right: -15px;
+        right: -34px;
       }
       @media (min-width: v.$desktop ) {
-       right: 30px;
+       right: -34px;
       }
     } 
 
@@ -169,7 +173,7 @@ svg{
     --top: 27px;
 
   position: absolute;
-  right: -15px;
+  right: 22px;
   width: 120px;
   height: var(--top);
   display: flex;
