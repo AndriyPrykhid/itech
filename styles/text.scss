@@ -18,6 +18,14 @@
         );
     }
 
+
+&_with-bg{
+    background-color: #f7f4ff;
+    color: var(--violett-color);
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
     &_purple{
 color: #b5a6f5;
     };

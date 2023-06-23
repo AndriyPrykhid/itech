@@ -1,0 +1,138 @@
+@use'./../../styles/variables.scss' as v;
+
+.one-app{
+    position: relative;
+    $double-gap : calc(var(--gap)*2);
+    margin-top: $double-gap;
+    padding: $double-gap;
+   width: 100%;
+ 
+
+    &__animation{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        background-image: url('./../../dist/assets/img/one-app-bubble.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+
+        animation: rotate-center 100s linear infinite both;
+
+        @keyframes rotate-center{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    &__container{
+        padding: $double-gap;
+        display: flex;
+flex-direction: column;
+@media (min-width: v.$bigger-tablet ) {
+    flex-direction: row;
+}
+    }
+
+    &__right,
+    &__left{
+        @media (min-width: v.$bigger-tablet ) {
+            flex: 1;
+        }
+        
+    }
+
+    &__left{
+        display: flex;
+        flex-direction: column;
+        gap: $double-gap;
+        margin-bottom: $double-gap;
+
+        p{
+            align-self: flex-start;
+        }
+        
+        @media (min-width: v.$bigger-tablet ) {
+            margin-bottom: 0;
+        }
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+        gap: $double-gap;
+
+        div{
+            display: flex;
+            gap: 5px;
+           span{
+            display: flex;
+            align-items: center;
+           }
+        }
+    }
+    br{
+        display: none;
+    }
+    @media (min-width: v.$bigger-tablet ) {
+        br{
+            display: block;
+        }
+    }
+        
+        &__infos{
+display: flex;
+gap: $double-gap;
+margin-top: $double-gap;
+text-transform: uppercase;
+font-weight: 700;
+        }
+&__info{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      padding: 8px;
+        background-color: var(--creame-color);
+        border-radius: 50%;
+}
+  
+    }
+   
+    svg{
+        fill: var(--violett-color);
+    
+
+
+
+          }
+
+
+ &__right{
+    height: 390px;
+ background-image: url(./../../dist/assets/img/one-app-background.png);
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: contain;
+
+ @media (min-width: v.$bigger-mobile ) {
+   height: 500px;
+}
+@media (min-width: v.$tablet) {
+    height: 660px;
+ }
+
+}
+
+}
