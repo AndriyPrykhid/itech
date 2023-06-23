@@ -1,2 +1,38 @@
-@use'variables' as v;
+@use'./../../styles/variables.scss' as v;
 
+.partners{
+    $double-gap: calc(var(--gap)*2);
+    width: 100%;
+    height: 600px;
+    position: relative;
+
+    &__wave{
+        z-index: 69;
+        top: -200px;
+
+        @media (min-width: v.$bigger-mobile ) {
+            top: -240px;
+                   
+                      }
+                      @media (min-width: v.$tablet ) {
+                        top: -267px;
+                              
+                                 }
+         
+                      @media (min-width: v.$bigger-tablet ) {
+                         top: -180px;
+                               
+                                  }
+     
+    }
+
+ &__container{
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: v.$bigger-tablet ) {
+        flex-direction: row;
+              
+                 }
+ }
+}
