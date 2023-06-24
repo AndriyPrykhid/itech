@@ -1,0 +1,28 @@
+@use'./../../styles/variables.scss' as v;
+
+.notero{
+    $double-gap: calc(var(--gap)*2);
+
+display: flex;
+justify-content: center;
+padding: 150px 0;
+
+&__container{
+    display: flex;
+}
+    &__left, &__right{
+        flex: 1;
+
+    }
+
+    &__right{
+        display: flex;
+       gap: $double-gap;
+        flex-direction: column;
+
+        p{
+            align-self: flex-start;
+            line-height: 30px;
+        }
+    }
+}
