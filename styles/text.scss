@@ -25,11 +25,22 @@
     font-size: 12px;
     padding: 5px 10px;
 }
+&_with-bg_white{
+    background-color: var(--white-color);
+}
 
     &_purple{
 color: #b5a6f5;
     };
     &_emojis{
         font-size: 20px;
+    }
+
+    &_{
+        color: var(--violett-color);
+    }
+
+    &_bold {
+        font-weight: 700;
     }
 }

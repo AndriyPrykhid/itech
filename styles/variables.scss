@@ -9,11 +9,17 @@ $bigger-desktop: 1400px;
 // font
 --smaller-font: 700 11px 'Inter', sans-serif;
 --font: 400 13px 'Inter', sans-serif;
+--bigger-font: 700 18px "Inter", sans-serif;
 --biggest-font: 700 24px 'Inter', sans-serif;
 
 
 
-   --transition: .3s;
+   --transition: 0.3s;
+
+//    z-index
+--almost-nice-index:68;
+--nice-index: 69;
+--bigger-than-nice-index: 70;
 
 
    //spacer
@@ -26,6 +32,7 @@ $bigger-desktop: 1400px;
 
       --smaller-font: 700 12px 'Inter', sans-serif;
       --font: 400 14px 'Inter', sans-serif;
+      --bigger-font: 700 20px "Inter", sans-serif;
       --biggest-font: 700 40px 'Inter', sans-serif;
            };
 
