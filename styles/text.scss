@@ -27,6 +27,7 @@
 }
 &_with-bg_white{
     background-color: var(--white-color);
+    
 }
 
     &_purple{
@@ -43,4 +44,14 @@ color: #b5a6f5;
     &_bold {
         font-weight: 700;
     }
+
+    &_smallest{
+font: var(--smallest-font);
+    }
+    &_smaller{
+        font: var(--smaller-font);
+            }
+            &_bigger{
+                font: var(--bigger-font);
+                    }
 }

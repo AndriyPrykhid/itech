@@ -3,7 +3,7 @@
 @use'./../../styles/mixins.scss' as mixins;
 
 
-.notero{
+.focus{
     $double-gap: calc(var(--gap)*2);
 
 display: flex;
@@ -18,19 +18,7 @@ width: 100%;
            
               }
 
-&::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 50%;
-    bottom: 0;
-   
-   @include mixins.background-image($image:'./../../dist/assets/img/notero-web.png',
-   $size: contain);
-   z-index: -1;
 
-}
 
 &__container{
     display: flex;
@@ -51,10 +39,11 @@ width: 100%;
 
     }
 
+
 &__left{
 
 
-  @include LocalMixins.half-container-image('./../../dist/assets/img/notero-ipad.png');
+  @include LocalMixins.half-container-image('./../../dist/assets/img/focus-table.png');
 
 }
 
@@ -89,26 +78,27 @@ width: 100%;
         align-items: center;
         padding: 10px 0;
         gap: 10px;
+        opacity: 0.6;
 
+      &_active{
+opacity: 1;
+      }
 
-        div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-           padding: 8px;
-            
-            background-color: var(--creame-color);
-            border-radius: 50%;
-
-            svg{
-                fill: var(--violett-color);
-                
-               
-            }
+      
             p{
                 align-self: center;
+                position: relative;
+                padding-left: 20px;
+                &::before{
+                    content: "*";
+                    top: 2px;
+                    left: 0;
+                    bottom: 0;
+                    color: var(--violett-color);
+                    position: absolute;
+                }
             }
-        }
+        
     }
 
     &__button{

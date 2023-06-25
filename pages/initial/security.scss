@@ -3,7 +3,7 @@
 @use'./../../styles/mixins.scss' as mixins;
 
 
-.notero{
+.security{
     $double-gap: calc(var(--gap)*2);
 
 display: flex;
@@ -18,23 +18,11 @@ width: 100%;
            
               }
 
-&::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 50%;
-    bottom: 0;
-   
-   @include mixins.background-image($image:'./../../dist/assets/img/notero-web.png',
-   $size: contain);
-   z-index: -1;
 
-}
 
 &__container{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: var(--gap);
     @media (min-width: var.$desktop ) {
         flex-direction: row;
@@ -51,10 +39,11 @@ width: 100%;
 
     }
 
-&__left{
+&__right{
+
+  @include LocalMixins.half-container-image('./../../dist/assets/img/security-mobiles.png');
 
 
-  @include LocalMixins.half-container-image('./../../dist/assets/img/notero-ipad.png');
 
 }
 
@@ -63,7 +52,7 @@ width: 100%;
 
 }
 
-    &__right{
+    &__left{
         display: flex;
        gap: $double-gap;
         flex-direction: column;
@@ -84,34 +73,7 @@ width: 100%;
         }
     }
 
-    &__benefit{
-        display: flex;
-        align-items: center;
-        padding: 10px 0;
-        gap: 10px;
+   
 
-
-        div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-           padding: 8px;
-            
-            background-color: var(--creame-color);
-            border-radius: 50%;
-
-            svg{
-                fill: var(--violett-color);
-                
-               
-            }
-            p{
-                align-self: center;
-            }
-        }
-    }
-
-    &__button{
-        width: 150px;
-    }
+    
 }
