@@ -1,4 +1,7 @@
-@use'./../../styles/variables.scss' as v;
+@use'./../../styles/variables.scss' as var;
+@use'./mixins.scss' as LocalMixins;
+@use'./../../styles/mixins.scss' as mixins;
+
 
 .notero{
     $double-gap: calc(var(--gap)*2);
@@ -9,7 +12,7 @@ padding-top: 50px;
 position: relative;
 width: 100%;
 
-@media (min-width: v.$desktop ) {
+@media (min-width: var.$desktop ) {
     padding-top: 150px;
 
            
@@ -22,24 +25,23 @@ width: 100%;
     left: 0;
     right: 50%;
     bottom: 0;
-    background-image: url("./../../dist/assets/img/notero-web.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+   
+   @include mixins.background-image('./../../dist/assets/img/notero-web.png');
+
 }
 
 &__container{
     display: flex;
     flex-direction: column;
     gap: var(--gap);
-    @media (min-width: v.$desktop ) {
+    @media (min-width: var.$desktop ) {
         flex-direction: row;
                
                   }
 }
     &__left, &__right{
 
-        @media (min-width: v.$desktop ) {
+        @media (min-width: var.$desktop ) {
             flex: 1;
                    
                       }
@@ -48,38 +50,15 @@ width: 100%;
     }
 
 &__left{
-    height: 390px;
-    position: relative;
-    background-image: url("./../../dist/assets/img/notero-ipad.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
 
-    @media (min-width: v.$bigger-mobile ) {
-       height: 500px;
-               
-                  }
 
-     @media (min-width: v.$tablet ) {
-          height: 660px;
-                           
-         }
+  @include LocalMixins.half-container-image('./../../dist/assets/img/notero-ipad.png');
+
 }
 
 &__animation{
-    position: absolute;
-    top: -15%;
-    right: -15%;
-    left: -15%;
-    bottom: -15%;
-    background-image: url("./../../dist/assets/img/notero-bubbles.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-    overflow: clip;
+@include LocalMixins.rotate-center(15%, './../../dist/assets/img/notero-bubbles.png');
 
-    animation: rotate-center 100s linear infinite both;
 }
 
     &__right{
@@ -97,7 +76,7 @@ width: 100%;
         line-height: 30px;
         br{
             display: none;
-            @media (min-width: v.$bigger-tablet) {
+            @media (min-width: var.$bigger-tablet) {
                 display: block;
             }
         }

@@ -1,4 +1,6 @@
 @use'./../../styles/variables.scss' as v;
+@use'./../../styles/mixins.scss' as mixins;
+
 
 
 .features{
@@ -47,13 +49,11 @@ animation: rotate-center 100s linear infinite both;
     &__wave{
         position: absolute;
         bottom: -12px;
-        background-image: url('./../../dist/assets/img/wave.png');
         width: 100%;
         height: 12px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        
+     
+   @include mixins.background-image('./../../dist/assets/img/wave.png');
+
     }
 
     &__items{

@@ -1,12 +1,15 @@
-@use'variables' as v;
+@use'variables' as var;
+@use'./mixins.scss' as mixins;
+
 
 .top__banner{
     width: 100%;
     min-height: 45px;
-    background-image: url('./../dist/assets/img/top_nav_background.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+ 
+    
+    @include mixins.background-image('./../dist/assets/img/top_nav_background.png');
+
+
     margin-bottom: -30px;
     padding-bottom: 30px;
     font: var(--smallest-font);
@@ -41,7 +44,7 @@ padding: calc(var(--gap)*2);
   padding: calc(var(--gap)*2) var(--gap);
   border-bottom: 2px solid var(--grey-color);
 
-  @media (min-width: v.$tablet) {
+  @media (min-width: var.$tablet) {
     border: none;
     align-items: center;
     padding: 0;
@@ -68,7 +71,7 @@ svg{
   }
 }
 
-  @media (min-width: v.$tablet) {
+  @media (min-width: var.$tablet) {
    display: none;
   }
 }
@@ -78,7 +81,7 @@ svg{
         width: 100%;
         gap: var(--gap);
         background-color: rgb(255, 255, 255);
-        @media (min-width: v.$tablet) {
+        @media (min-width: var.$tablet) {
           flex-direction: row;
          }
       
@@ -92,7 +95,7 @@ svg{
         gap: var(--gap);
     
      
-        @media (min-width: v.$desktop) {
+        @media (min-width: var.$desktop) {
           padding-left: 100px;
         }
       
@@ -129,10 +132,10 @@ svg{
           background-color: var(--white-color);
         }
       }
-      @media (min-width: v.$tablet ) {
+      @media (min-width: var.$tablet ) {
         right: -34px;
       }
-      @media (min-width: v.$desktop ) {
+      @media (min-width: var.$desktop ) {
        right: -34px;
       }
     } 
@@ -152,7 +155,7 @@ svg{
         justify-content: flex-start;
       }
 
-      @media (min-width: v.$tablet ) {
+      @media (min-width: var.$tablet ) {
         position: relative;
         ul{
           flex-wrap: nowrap;
@@ -169,7 +172,7 @@ svg{
 
 .header__link_tablet{
 
-  @media (min-width: v.$tablet ) {
+  @media (min-width: var.$tablet ) {
     --top: 27px;
 
   position: absolute;
@@ -195,7 +198,7 @@ svg{
    }
  
 
-  @media (min-width: v.$desktop ) {
+  @media (min-width: var.$desktop ) {
    position: static;
    width: auto;
    height: auto;
@@ -205,11 +208,11 @@ svg{
 .header__svg_tablet{
   display: none;
 
-  @media (min-width: v.$tablet ) {
+  @media (min-width: var.$tablet ) {
     display: inline;
    }
 
-   @media (min-width: v.$desktop ) {
+   @media (min-width: var.$desktop ) {
     display: none;
    }
 }
