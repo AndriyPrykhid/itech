@@ -1,0 +1,36 @@
+@use'./variables.scss' as var;
+
+
+.card{
+    $double-gap: calc(var(--gap)*2);
+
+    display: flex;
+    gap: $double-gap;
+    width: auto;
+    padding: var(--gap);
+    border-radius: 15px;
+    background-color: var(--white-color);
+    box-shadow: -4.104px 11.276px 38px 0px rgb(45 42 61 / 10%);
+    @media (min-width: var.$bigger-mobile ) {
+        width: 460px;
+                  }
+
+    svg{
+        fill: var(--yellow-color);
+    }
+
+    &__right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5px;
+
+    }
+
+    &__left{
+display: none;
+        @media (min-width: var.$bigger-mobile ) {
+            display: inline;
+                      }
+    }
+}
