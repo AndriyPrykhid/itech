@@ -8,15 +8,12 @@
     margin-top: 75px;
     background-color: var(--creame-color);
 
-    &__wave{
+    .features__wave{
         top: -12px;
         bottom: auto;
         transform: scaleY(-1);
 
-        @media (min-width: var.$bigger-tablet ) {
-           margin-top: 150px;
-                   
-                      }
+        
     }
 
     &__content{

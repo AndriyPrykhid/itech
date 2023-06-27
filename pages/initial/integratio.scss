@@ -1,0 +1,71 @@
+@use'./../../styles/variables.scss' as var;
+@use'./../../styles/mixins.scss' as mixins;
+@use'./mixins.scss' as LocalMixins;
+
+.integration{
+    $double-gap: calc(var(--gap)*2);
+
+    position: relative;
+width: 100%;
+margin-top: var(--gap);
+@include mixins.background-image(
+    "./../../dist/assets/img/integration-background.png"
+);
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        gap: var(--gap);
+    }
+
+    &__icons{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+div{
+    padding-right: 10px;
+    img{
+        max-width: 100%;
+        min-width: 100%;
+      }
+    animation: slide-up-down 1.7s ease-in-out infinite alternate both;
+   
+    &:nth-child(2){
+        animation-delay: 0.5s;
+    }
+    &:nth-child(3){
+        animation-delay: 1s;
+
+    }
+    &:nth-child(4){
+        animation-delay: 1.5s;
+
+    }
+    &:nth-child(5){
+        animation-delay: 2s;
+
+    }
+}
+    }
+    br{
+        @media (min-width: var.$bigger-tablet ) {
+            display: block;
+        
+                   
+                      }
+                      @media (min-width: var.$desktop) {
+                      display: none;
+                                  }
+    }
+
+    .text_biggest{
+        text-align: center;
+    }
+
+    .features__wave{
+        transform: scaleY(-1);
+    }
+}
