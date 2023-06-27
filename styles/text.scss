@@ -54,7 +54,11 @@ font: var(--smallest-font);
     &_smaller{
         font: var(--smaller-font);
             }
-  &_smallest{
-font: var(--smallest-font);
-    }
+  &_bigger{
+    font: var(--bigger-font);
+  }
+
+  &_violett{
+    color: var(--violett-color);
+  }
 }
