@@ -1,0 +1,34 @@
+@use'./../../styles/variables.scss' as var;
+@use'./../../styles/mixins.scss' as mixins;
+@use'./mixins.scss' as LocalMixins;
+
+.support{
+    
+    margin-top: 50px;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--gap);
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+align-items: center;      
+        @media (min-width: var.$bigger-tablet ) {
+            flex-direction: row;
+            gap: var(--gap);
+        
+                   
+                      }
+    }
+    &__left,
+    &__right{
+display: flex;
+flex-direction: column;
+flex: 1;
+    }
+}

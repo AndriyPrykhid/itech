@@ -1,0 +1,65 @@
+@use'./../../styles/variables.scss' as var;
+@use'./../../styles/mixins.scss' as mixins;
+@use'./mixins.scss' as LocalMixins;
+
+.community{
+    $double-gap: calc(var(--gap)*2);
+    
+    margin-top: 50px;
+
+    &__container{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--gap);
+    }
+
+  &__content{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: $double-gap;
+border-radius: var(--gap);
+    border: 2px solid var(--grey-color);
+    padding: $double-gap 0;
+
+    @media (min-width: var.$bigger-tablet ) {
+        flex-direction: row;
+        gap: 0;
+                  }
+  }
+
+  &__social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   padding: 0 $double-gap;
+
+
+    gap: var(--gap);
+   
+   
+    @media (min-width: var.$bigger-tablet ) {
+        border-right: 1px solid var(--grey-color);
+        flex: 1;
+                  }
+   
+    &:last-child {
+        border: none;
+    }
+
+    svg{
+        width: 40px;
+        height: 40px;
+        fill: var(--violett-color);
+        @media (min-width: var.$bigger-tablet ) {
+            width: 55px;
+            height: 55px;
+                      }
+    }
+
+  
+  }
+}
