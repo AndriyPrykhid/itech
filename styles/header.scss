@@ -27,12 +27,27 @@
     }
 }
 
+.header_fixed{
+  position: fixed;
+
+border-radius: 0;
+
+  top: 0;
+  right: 0;
+  left: 0;
+
+  z-index: 999;
+
+
+}
+
 header{
+ 
+
    background-color: var(--white-color);
    border-top-right-radius: 20px;
    border-top-left-radius: 20px;
 padding: calc(var(--gap)*2);
-
 
 
 .header__menu{
